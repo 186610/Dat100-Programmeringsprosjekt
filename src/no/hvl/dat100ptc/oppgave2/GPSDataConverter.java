@@ -36,7 +36,6 @@ public class GPSDataConverter {
 		GPSPoint gpspoint = new GPSPoint(time, latitude, longitude, elevation); 
 		
 		return gpspoint;
-		
 	}
 	
 }
