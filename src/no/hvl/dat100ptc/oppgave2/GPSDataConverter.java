@@ -37,5 +37,5 @@ public class GPSDataConverter {
 		
 		return gpspoint;
 	}
-	
+
 }
