@@ -81,19 +81,11 @@ public class GPSComputer {
 	}
 	
 	public double maxSpeed() {
-		
-		double maxspeed = 0;
-		
-		return maxspeed = GPSUtils.findMax(speeds());
-		
+		return GPSUtils.findMax(speeds());
 	}
 
-	public double averageSpeed() {
-
-		double average = 0;
-		
-		return average = totalDistance() / totalTime();
-		
+	public double averageSpeed() {	
+		return totalDistance() / totalTime();
 	}
 
 
