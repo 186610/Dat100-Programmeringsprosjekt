@@ -39,10 +39,20 @@ public class ShowSpeed extends EasyGraphics {
 	
 	public void showSpeedProfile(int ybase) {
 		
-		int x = MARGIN,y;
-	
-		// TODO
-		throw new UnsupportedOperationException(TODO.method());
+		int x = MARGIN;	
+		double[] speeds = gpscomputer.speeds();
 		
+		setColor(0, 0, 255);
+		
+		for (int i = 0; i < speeds.length; i++) {
+			int speed = (int) (Math.round(speeds[i]) * 3.6);
+			drawLine(x, ybase, x, ybase - speed);
+			x += 2;
+		}
+		
+		setColor(0, 255, 0);
+		
+		int averageSpeed = (int)(gpscomputer.averageSpeed() * 3.6);
+		drawLine(MARGIN, ybase - averageSpeed, x, ybase - averageSpeed);
 	}
 }
